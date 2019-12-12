@@ -1,0 +1,266 @@
+<html>    
+<head>    
+<style>    
+#customers {    
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;    
+  border-collapse: collapse;    
+  width: 100%;    
+}    
+   
+#customers td, #customers th {    
+  border: 1px solid #ddd;    
+  padding: 8px;    
+}    
+   
+#customers tr:nth-child(even){background-color: #f2f2f2;}    
+   
+#customers tr:hover {background-color: #ddd;}    
+   
+#customers th {    
+  padding-top: 12px;    
+  padding-bottom: 12px;    
+  text-align: left;    
+  background-color: #4CAF50;    
+  color: white;    
+}    
+</style>    
+</head>    
+    
+<body>    
+  <input type="button" id="btnDownload" value="download" /> Please click on this button to get chart with html content on pdf    
+  <div class="white-back row" style="padding: 1.5rem;" id="tvgMainCnt">    
+    <div id="top-content">    
+      <div>    
+        <div>    
+          <img src="https://miro.medium.com/max/1198/1*n-Q2XBz6CFC1MgMpdab4xQ.jpeg" style="height: 100px;" />    
+        </div>    
+        </div>    
+      <div style="margin-top: 1rem;">    
+        <p style="color:green">    
+          Dear members,    
+        </p>    
+      </div>    
+      <div>    
+        Added some fake text: Please ignore this is test text, Please ignore this is test text, Please ignore this is test text.    
+      </div>    
+      <br />    
+       <table id="customers" class="table table-striped" width="100%">    
+           
+        <thead width="100%" width="100%">    
+            <tr class='warning' >    
+                 <th>No.</th>    
+                <th>Country</th>    
+                <th>Population</th>    
+                <th>Date</th>    
+                <th>Age</th>    
+            </tr>    
+        </thead>    
+        <tbody width="100%">    
+            <tr>    
+                <td>1</td>    
+                <td>Chinna</td>    
+                <td>1,363,480,000 000 000</td>    
+                <td>March 24, 2014</td>    
+                <td>19.1</td>    
+            </tr>    
+            <tr>    
+                <td>2</td>    
+                <td>India</td>    
+                <td>1,241,900,000</td>    
+                <td>March 24, 2014</td>    
+                <td>17.4</td>    
+            </tr>    
+            <tr>    
+                <td>3</td>    
+                <td>United States</td>    
+                <td>317,746,000</td>    
+                <td>March 24, 2014</td>    
+                <td>4.44</td>    
+            </tr>    
+            <tr>    
+                <td>4</td>    
+                <td>Indonesia</td>    
+                <td>249,866,000</td>    
+                <td>July 1, 2013</td>    
+                <td>3.49</td>    
+            </tr>    
+            <tr>    
+                <td>5</td>    
+                <td>Brazil</td>    
+                <td>201,032,714</td>    
+                <td>July 1, 2013</td>    
+                <td>2.81</td>    
+            </tr>    
+        </tbody>    
+    </table>    
+      <div style="margin-top: 1rem;">    
+        <p>    
+          Download of chart with html content should work on all browser but not working in Microsoft edge.    
+        </p>    
+      </div>    
+    </div>    
+    
+     </div>    
+    <div id="bottom-content">    
+      <p>Thanks for looking into this issue, struggling to fix this for last 2 days..    
+      UPDATE: Finally able to fix it. Cheers!!</p>    
+    </div>    
+  </div>    
+</body>    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    
+<!-- Required to convert named colors to RGB -->    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvg/1.4/rgbcolor.min.js"></script>    
+    
+<!-- Optional if you want blur -->    
+<script src="https://cdn.jsdelivr.net/npm/stackblur-canvas@^1/dist/stackblur.min.js"></script>    
+    
+<script src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/5.0.7/highcharts.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.debug.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>    
+    
+<script type="text/javascript">    
+$(document).ready(function() {    
+    Highcharts.chart('testchart', {    
+    
+        title: {    
+            text: 'Solar Employment Growth by Sector, 2010-2016'    
+        },    
+    
+        subtitle: {    
+            text: 'Source: thesolarfoundation.com'    
+        },    
+    
+        yAxis: {    
+            title: {    
+                text: 'Number of Employees'    
+            }    
+        },    
+        legend: {    
+            layout: 'vertical',    
+            align: 'right',    
+            verticalAlign: 'middle'    
+        },    
+    
+        plotOptions: {    
+            series: {    
+                label: {    
+                    connectorAllowed: false    
+                },    
+                pointStart: 2010    
+            }    
+        },    
+    
+        series: [{    
+            name: 'Installation',    
+            data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]    
+        }, {    
+            name: 'Manufacturing',    
+            data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]    
+        }, {    
+            name: 'Sales & Distribution',    
+            data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]    
+        }, {    
+            name: 'Project Development',    
+            data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]    
+        }, {    
+            name: 'Other',    
+            data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]    
+        }],    
+    
+        responsive: {    
+            rules: [{    
+                condition: {    
+                    maxWidth: 500    
+                },    
+                chartOptions: {    
+                    legend: {    
+                        layout: 'horizontal',    
+                        align: 'center',    
+                        verticalAlign: 'bottom'    
+                    }    
+                }    
+            }]    
+        }    
+    
+    });    
+});    
+$("#btnDownload").click(function(){    
+  var doc = new jsPDF('portrait', 'pt', 'a4', true);    
+    var elementHandler = {    
+        '#ignorePDF': function(element, renderer) {    
+            return true;    
+        }    
+    };    
+    
+    var source = document.getElementById("top-content");    
+    doc.fromHTML(source, 15, 15, {    
+        'width': 560,    
+        'elementHandlers': elementHandler    
+    });    
+    
+    var svg = document.querySelector('svg');    
+    var canvas = document.createElement('canvas');    
+    var canvasIE = document.createElement('canvas');    
+    var context = canvas.getContext('2d');    
+    
+    
+    
+    
+    var data = (new XMLSerializer()).serializeToString(svg);    
+    canvg(canvas, data);    
+    var svgBlob = new Blob([data], {    
+        type: 'image/svg+xml;charset=utf-8'    
+    });    
+    
+    var url = canvas.toDataURL(svgBlob);//DOMURL.createObjectURL(svgBlob);    
+    
+    var img = new Image();    
+    img.onload = function() {    
+        context.canvas.width = $('#testchart').find('svg').width();;    
+        context.canvas.height = $('#testchart').find('svg').height();;    
+        context.drawImage(img, 0, 0);    
+        // freeing up the memory as image is drawn to canvas    
+        //DOMURL.revokeObjectURL(url);    
+    
+        var dataUrl;    
+        if (isIEBrowser()) { // Check of IE browser     
+            var svg = $('#testchart').highcharts().container.innerHTML;    
+            canvg(canvasIE, svg);    
+            dataUrl = canvasIE.toDataURL('image/JPEG');    
+        } else {    
+            dataUrl = canvas.toDataURL('image/jpeg');    
+        }    
+        doc.addImage(dataUrl, 'JPEG', 20, 365, 560, 350); // 365 is top     
+    
+        var bottomContent = document.getElementById("bottom-content");    
+        doc.fromHTML(bottomContent, 15, 750, {   //700 is bottom content top  if you increate this then you should increase above 365    
+            'width': 560,    
+            'elementHandlers': elementHandler    
+        });    
+    
+        setTimeout(function() {    
+            doc.save('HTML-To-PDF-Dvlpby-Bhavdip.pdf');    
+        }, 2000);    
+    };    
+    img.src = url;    
+});    
+function isIEBrowser() {    
+    var ieBrowser;    
+    var ua = window.navigator.userAgent;    
+    var msie = ua.indexOf("MSIE ");    
+    
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // Internet Explorer    
+    {    
+        ieBrowser = true;    
+    } else //Other browser    
+    {    
+        console.log('Other Browser');    
+        ieBrowser = false;    
+    }    
+    
+    return ieBrowser;    
+};    
+</script>    
+</html>   
