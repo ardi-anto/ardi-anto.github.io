@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <div id="accordion">
+                    <div class="card">
+
+                        <div id="collapseOne" class="collapse hide" data-parent="#accordion">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
+                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
+                                squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                                craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                                butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+
+                            </div>
+                        </div>
+
+                        <div class="card-header" id="footerOne">
+                            <h5 class="mb-0" id="btnTambah">
+                                <button class="btn btn-link" data-toggle="collapse" id="btnClp"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Tambahkan Data
+                                </button>
+                            </h5>
+
+                            <div class="d-none" id="pengganti">
+                                <div class="row">
+                                    <div class="col">
+                                        <button class="btn btn-primary" data-toggle="collapse" id="btnSave"
+                                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Save
+                                        </button>
+                                    </div>
+                                    <div class="col">
+                                        <button class="btn btn-primary" data-toggle="collapse" id="btnCancel"
+                                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+    // Button collapse click
+    $("#btnClp").click(function () {
+        $("#btnTambah").removeClass("d-block").addClass("d-none");;
+        $("#pengganti").toggleClass("d-block");
+    });
+
+    //Cancel click
+    $("#btnCancel").click(function () {
+        $("#btnTambah").removeClass("d-none").addClass("d-block");
+        $("#pengganti").removeClass("d-block");
+    });
+</script>
+
+</html>
