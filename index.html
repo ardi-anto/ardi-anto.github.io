@@ -1,82 +1,464 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 
 <head>
-  <title>Welcome</title>
-  <!-- Required meta tags -->
+  <meta name="view-transition" content="same-origin" />
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- Material Kit CSS -->
-  <link href="assets/css/material-kit.css?v=2.0.6" rel="stylesheet" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
 </head>
 
-<body>
-  <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
-    <div class="container">
-      <div class="navbar-translate">
-        <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
-          ardianto </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="sr-only">Sugeh Rawuh</span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="material-icons">apps</i> Template
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/bg3.jpg')">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 ml-auto mr-auto">
-          <div class="brand text-center">
-            <h1>Sugeng Rawuh</h1>
-            <h3 class="title text-center">Subtitle</h3>
-          </div>
+<body
+  class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+  <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-16 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-sm"><img alt="Ardianto Monogram Logo" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1X2QWUBCIj6-OcYRpZDAM9pmwMTUh91MoyDwo3bSMzNGgCkEQWR392dCGNOclB7Vur3go8TenMNGqhdZ1SrwNBKI8TLybcsfKMBuX4fjfyL9vHx0GjJ_5JvMjtj72BsqPZh3VWC9C9a11UAbBunKEJgoFFmNAGCOHxd0KKwQS-6lenAWb8n-w3vZlLiAbIBMIkq7DeVSEs4_bR0-JWwfkvuy_UHXQrBOjvsZvnsFeUDebOrO6O8MfDCnfA">
+        <div class="flex flex-col"><span
+            class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Ardianto</span><span
+            class="font-label-mono-sm text-label-mono-sm text-on-surface-variant leading-none mt-1">Senior Software
+            Engineer</span></div>
+        <div
+          class="hidden xl:flex items-center gap-space-xs ml-space-sm px-space-sm py-1 rounded-full bg-surface-container-high/80">
+          <span class="relative flex h-2 w-2"><span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span
+              class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span
+            class="font-label-mono-sm text-label-mono-sm text-tertiary">Available for opportunities</span>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="main main-raised">
-    <div class="container">
-      <div class="section text-center">
-        <h2 class="title">BLOG</h2>
+      <nav class="hidden lg:flex items-center gap-space-sm"
+        data-active-classes="bg-surface-container-high text-on-surface font-medium rounded-lg px-3 py-1.5"><a
+          aria-current="page"
+          class="transition-colors bg-surface-container-high text-on-surface font-medium rounded-lg px-3 py-1.5"
+          data-path="about" href="index.html">About</a><a
+          class="px-3 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 rounded-lg transition-colors"
+          data-path="skills-and-tech" href="skills.html">Skills &amp; Tech</a><a
+          class="px-3 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 rounded-lg transition-colors"
+          data-path="projects" href="projects.html">Projects</a><a
+          class="px-3 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 rounded-lg transition-colors"
+          data-path="experience" href="experience.html">Experience</a><a
+          class="px-3 py-1.5 font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 rounded-lg transition-colors"
+          data-path="contact" href="mailto:ardianto.connect@gmail.com">Contact</a></nav>
+      <div class="flex items-center gap-space-sm">
+        <div class="flex items-center gap-1"><a aria-label="GitHub Profile"
+            class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/70 transition-colors"
+            href="https://github.com/ardi-anto" rel="noopener noreferrer" target="_blank"><span
+              class="material-symbols-outlined text-[20px]">code</span></a><a aria-label="LinkedIn Profile"
+            class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/70 transition-colors"
+            href="https://www.linkedin.com/in/ardianto-ardianto-4326a185/" rel="noopener noreferrer"
+            target="_blank"><span class="material-symbols-outlined text-[20px]">share</span></a><a
+            aria-label="Email or Inquire"
+            class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/70 transition-colors"
+            data-path="contact" href="mailto:ardianto.connect@gmail.com"><span
+              class="material-symbols-outlined text-[20px]">terminal</span></a></div>
+        <div class="h-5 w-px bg-outline-variant/30 hidden sm:block"></div><img alt="Profile"
+          class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/50 hover:scale-[5] hover:shadow-2xl hover:z-50 relative transition-transform duration-300 origin-top-right cursor-pointer"
+          src="./profile.jpg">
       </div>
     </div>
-  </div>
-  <footer class="footer footer-default">
-    <div class="container">
-      <nav class="float-left">
-        <ul>
-          <li>
-            <a href="https://www.creative-tim.com/">
-              Creative Tim
+  </header>
+  <main class="w-full pt-16 bg-surface min-h-screen">
+    <div class="flex flex-col w-full">
+      <!-- Atmospheric Ambient Canvas Lighting -->
+      <div class="relative w-full overflow-hidden">
+        <div
+          class="absolute -top-40 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-primary/10 rounded-full blur-[140px] pointer-events-none">
+        </div>
+        <div
+          class="absolute top-96 -left-32 w-[420px] h-[320px] bg-secondary-container/20 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div
+          class="absolute top-[800px] -right-32 w-[480px] h-[380px] bg-tertiary/10 rounded-full blur-[140px] pointer-events-none">
+        </div>
+        <!-- HERO SECTION -->
+        <section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg lg:gap-space-xl items-center">
+            <!-- Hero Left Column: Narrative & Action -->
+            <div class="lg:col-span-7 flex flex-col gap-space-md">
+              <!-- Availability Tag -->
+              <div
+                class="inline-flex items-center gap-space-sm px-space-md py-1.5 rounded-full bg-surface-container-high w-fit shadow-sm">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary"></span>
+                </span>
+                <span class="font-label-mono-sm text-label-mono-sm text-tertiary font-medium">Available for high-impact
+                  roles &amp; technical consulting</span>
+              </div>
+              <!-- Main Greeting & Role Description -->
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center gap-space-sm">
+                  <span
+                    class="font-label-mono-sm text-label-mono-sm text-primary tracking-widest uppercase font-semibold">Engineering
+                    Portfolio // 2026</span>
+                  <span class="h-px w-12 bg-surface-container-highest"></span>
+                </div>
+                <h1 class="font-display text-display text-on-surface tracking-tight leading-tight">
+                  Hi, I'm Ardianto <span
+                    class="inline-block hover:rotate-12 transition-transform duration-300">👋</span>
+                </h1>
+                <p class="font-headline-sm text-headline-sm text-primary-fixed-dim font-medium max-w-2xl mt-1">
+                  Senior Software Engineer specializing in Distributed Systems, Cloud Architecture, and High-Performance
+                  Web Applications.
+                </p>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed mt-2">
+                  Building mission-critical backends, low-latency microservices, and reactive developer interfaces.
+                  Passionate about fault-tolerance, eBPF telemetry, and high-concurrency systems.
+                </p>
+              </div>
+              <!-- CTAs -->
+              <div class="flex flex-wrap items-center gap-space-sm pt-2">
+                <a class="px-space-lg py-3 rounded-lg bg-primary-container text-on-primary-container font-label-ui text-label-ui font-semibold shadow-md hover:bg-primary transition-all flex items-center gap-space-xs group"
+                  href="#projects">
+                  <span class="">Explore Projects</span>
+                  <span
+                    class="material-symbols-outlined text-base group-hover:translate-x-0.5 transition-transform">arrow_downward</span>
+                </a>
+                <a class="px-space-lg py-3 rounded-lg bg-surface-container-high text-on-surface font-label-ui text-label-ui font-medium hover:bg-surface-bright transition-all flex items-center gap-space-xs group"
+                  href="https://github.com/ardi-anto" rel="noopener noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-base text-primary">terminal</span>
+                  <span class="">View GitHub</span>
+                  <span
+                    class="font-label-mono-sm text-label-mono-sm text-on-surface-variant group-hover:text-primary transition-colors">@ardi-anto</span>
+                </a>
+                <button
+                  class="px-space-md py-3 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-ui text-label-ui transition-all flex items-center gap-space-xs"
+                  onclick="handleDownloadCV()">
+                  <span class="material-symbols-outlined text-base">description</span>
+                  <span class="">Download CV</span>
+                </button>
+              </div>
+              <!-- Quick System Indicators -->
+              <div class="flex items-center gap-space-md pt-4 text-on-surface-variant">
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-sm text-tertiary">verified_user</span>
+                  <span class="font-label-mono-sm text-label-mono-sm">Clean Architecture</span>
+                </div>
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-sm text-primary">cloud_done</span>
+                  <span class="font-label-mono-sm text-label-mono-sm">Kubernetes &amp; Cloud Native</span>
+                </div>
+                <div class="hidden sm:flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-sm text-secondary">memory</span>
+                  <span class="font-label-mono-sm text-label-mono-sm">Low-latency Rust / Go</span>
+                </div>
+              </div>
+            </div>
+            <!-- Hero Right Column: Interactive Terminal Preview -->
+            <div class="lg:col-span-5 flex flex-col">
+              <div
+                class="rounded-xl bg-surface-container-lowest/90 backdrop-blur-md p-space-md shadow-xl relative group">
+                <!-- Glow background overlay -->
+                <div
+                  class="absolute -inset-0.5 bg-gradient-to-r from-primary-container/20 to-secondary-container/20 rounded-xl blur-sm opacity-50 group-hover:opacity-80 transition duration-500">
+                </div>
+                <div class="relative bg-surface-container-lowest rounded-lg overflow-hidden">
+                  <!-- Window Chrome Header -->
+                  <div class="flex items-center justify-between px-space-md py-2.5 bg-surface-container-low">
+                    <div class="flex items-center gap-2">
+                      <div class="w-3 h-3 rounded-full bg-error/80"></div>
+                      <div class="w-3 h-3 rounded-full bg-surface-bright"></div>
+                      <div class="w-3 h-3 rounded-full bg-tertiary/80"></div>
+                    </div>
+                    <div class="flex items-center gap-space-xs text-on-surface-variant">
+                      <span class="material-symbols-outlined text-sm">code</span>
+                      <span class="font-label-mono-sm text-label-mono-sm">ardianto.config.ts</span>
+                    </div>
+                    <div class="flex items-center gap-space-xs">
+                      <button
+                        class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+                        id="copyProfileBtn" onclick="copyProfileConfig()" title="Copy snippet">
+                        <span class="material-symbols-outlined text-sm">content_copy</span>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Terminal Code Body -->
+                  <div class="p-space-md font-label-code text-label-code leading-relaxed overflow-x-auto">
+                    <pre class="text-on-surface"><span class="text-secondary font-medium">const</span> <span class="text-primary font-semibold">engineer</span>: <span class="text-tertiary">DeveloperProfile</span> = {
+  <span class="text-primary-fixed">name</span>: <span class="text-tertiary-fixed">"Ardianto"</span>,
+  <span class="text-primary-fixed">role</span>: <span class="text-tertiary-fixed">"Senior Software Engineer"</span>,
+  <span class="text-primary-fixed">location</span>: <span class="text-tertiary-fixed">"Yogyakarta, Indonesia / Remote"</span>,
+  <span class="text-primary-fixed">stack</span>: [
+    <span class="text-tertiary-fixed">"Java"</span>,
+    <span class="text-tertiary-fixed">"Kotlin"</span>,
+    <span class="text-tertiary-fixed">"Go"</span>,
+    <span class="text-tertiary-fixed">"TypeScript/JS"</span>,
+    <span class="text-tertiary-fixed">"PHP"</span>,
+    <span class="text-tertiary-fixed">"Dart/Flutter"</span>,
+    <span class="text-tertiary-fixed">"React"</span>,
+    <span class="text-tertiary-fixed">"Kubernetes"</span>,
+    <span class="text-tertiary-fixed">"PostgreSQL"</span>,
+    <span class="text-tertiary-fixed">"MongoDB"</span>,
+    <span class="text-tertiary-fixed">"Ai"</span>
+  ],
+  <span class="text-primary-fixed">currentlyBuilding</span>: 
+    <span class="text-tertiary-fixed">"High-throughput telemetry ingestion engine"</span>,
+  <span class="text-primary-fixed">status</span>: 
+    <span class="text-tertiary-fixed">"Open to select roles &amp; open-source collaboration"</span>
+};</pre>
+                  </div>
+                  <!-- Terminal Footer Status Bar -->
+                  <div
+                    class="flex items-center justify-between px-space-md py-2 bg-surface-container text-on-surface-variant text-label-mono-sm font-label-mono-sm">
+                    <div class="flex items-center gap-space-xs">
+                      <span class="inline-block w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                      <span class="">TypeScript 5.4</span>
+                    </div>
+                    <span class="">UTF-8 // LF</span>
+                    <span class="text-primary">main*</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Quick Stats Ribbon (Telemetry) -->
+          <div class="mt-space-xl grid grid-cols-2 md:grid-cols-2 gap-space-md">
+            <div
+              class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-1 hover:bg-surface-container transition-colors">
+              <div class="flex items-center justify-between text-on-surface-variant mb-1">
+                <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Experience</span>
+                <span class="material-symbols-outlined text-primary text-xl">history</span>
+              </div>
+              <span class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">7+
+                Years</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">Production scale engineering</span>
+            </div>
+            <div
+              class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-1 hover:bg-surface-container transition-colors">
+              <div class="flex items-center justify-between text-on-surface-variant mb-1">
+                <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Deployments</span>
+                <span class="material-symbols-outlined text-tertiary text-xl">rocket_launch</span>
+              </div>
+              <span class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">40+</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">Distributed systems shipped</span>
+            </div>
+            <div
+              class="hidden p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-1 hover:bg-surface-container transition-colors">
+              <div class="flex items-center justify-between text-on-surface-variant mb-1">
+                <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Open Source</span>
+                <span class="material-symbols-outlined text-secondary text-xl">star</span>
+              </div>
+              <span class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">12k+</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">Stars across repos &amp; crates</span>
+            </div>
+            <div
+              class="hidden p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-1 hover:bg-surface-container transition-colors">
+              <div class="flex items-center justify-between text-on-surface-variant mb-1">
+                <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Reliability SLA</span>
+                <span class="material-symbols-outlined text-primary-container text-xl">speed</span>
+              </div>
+              <span class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">99.99%</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">Production uptime benchmark</span>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION: FEATURED PROJECTS -->
+        <section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl" id="projects">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-space-xs">
+                <span
+                  class="font-label-mono-sm text-label-mono-sm text-primary tracking-widest uppercase font-semibold">Flagship
+                  Works</span>
+                <span class="h-px w-8 bg-surface-container-highest"></span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+                Featured Projects &amp; Architecture
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                Selected distributed systems, performance libraries, and resilient database engines built for production
+                resilience.
+              </p>
+            </div>
+            <a class="inline-flex items-center gap-space-xs text-primary font-label-ui text-label-ui hover:text-primary-fixed transition-colors"
+              href="https://github.com/ardi-anto" rel="noopener noreferrer" target="_blank">
+              <span class="">Explore All 28 Repositories</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="copyright float-right">
-        &copy;
-        <script>
-          document.write(new Date().getFullYear())
-        </script>, made with <i class="material-icons">favorite</i> by
-        <a href="https://www.creative-tim.com/" target="blank">Creative Tim</a> for a better web.
+          </div>
+          <div id="featured-projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+            <!-- Rendered via main.js -->
+          </div>
+        </section>
+        <!-- SECTION: CORE COMPETENCIES & TECH MATRIX -->
+        <section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl">
+          <div class="flex flex-col gap-space-xs mb-space-lg">
+            <div class="flex items-center gap-space-xs">
+              <span
+                class="font-label-mono-sm text-label-mono-sm text-tertiary tracking-widest uppercase font-semibold">Technical
+                Arsenal</span>
+              <span class="h-px w-8 bg-surface-container-highest"></span>
+            </div>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+              Core Competencies &amp; Tech Matrix
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+              Deep practical experience across system-level architectures, cloud infra lifecycle, modern frontend
+              frameworks, and distributed data fabrics.
+            </p>
+          </div>
+          <div id="skills-matrix-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+            <!-- Rendered via main.js -->
+          </div>
+        </section>
+        <!-- SECTION: INTERACTIVE 'GET IN TOUCH' & CONTACT TEASER -->
+        <section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl">
+          <div class="relative rounded-2xl bg-surface-container-low p-space-lg lg:p-space-xl overflow-hidden shadow-xl">
+            <!-- Subtle Glow Inset -->
+            <div
+              class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary-container/10 rounded-full blur-[90px] pointer-events-none">
+            </div>
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+              <div class="lg:col-span-7 flex flex-col gap-space-sm">
+                <div class="flex items-center gap-space-xs">
+                  <span class="inline-flex h-2 w-2 rounded-full bg-tertiary"></span>
+                  <span
+                    class="font-label-mono-sm text-label-mono-sm text-tertiary font-semibold uppercase tracking-wider">Direct
+                    Transmission</span>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+                  Have an architectural challenge or leadership opportunity?
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                  Whether you need hands-on systems programming, technical roadmap guidance, or a dedicated senior
+                  engineering hire, my inbox is open.
+                </p>
+                <!-- Deployment telemetry tag -->
+                <div
+                  class="flex flex-wrap items-center gap-space-xs text-on-surface-variant font-label-mono-sm text-label-mono-sm pt-2">
+                  <span class="px-2 py-1 rounded bg-surface-container-high">Host: ardi-anto.github.io</span>
+                  <span class="px-2 py-1 rounded bg-surface-container-high">Protocol: HTTPS / TLS 1.3</span>
+                  <span class="px-2 py-1 rounded bg-surface-container-high text-tertiary">Status: Operational</span>
+                </div>
+              </div>
+              <!-- Contact Action Card -->
+              <div
+                class="lg:col-span-5 flex flex-col gap-space-md p-space-lg rounded-xl bg-surface-container-lowest shadow-md">
+                <span
+                  class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider">Direct
+                  Email Channel</span>
+                <div
+                  class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low text-on-surface">
+                  <div class="flex items-center gap-space-xs truncate mr-2">
+                    <span class="material-symbols-outlined text-sm text-primary">mail</span>
+                    <span class="font-label-code text-label-code text-on-surface truncate"
+                      id="emailValue">ardianto.connect@gmail.com</span>
+                  </div>
+                  <button
+                    class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:text-primary hover:bg-surface-bright font-label-ui text-label-ui transition-all flex items-center gap-1 shrink-0"
+                    id="copyEmailBtn" onclick="copyEmailToClipboard()">
+                    <span class="material-symbols-outlined text-sm" id="copyIcon">content_copy</span>
+                    <span id="copyText" class="">Copy</span>
+                  </button>
+                </div>
+                <div class="grid grid-cols-2 gap-space-sm pt-1">
+                  <a class="py-2.5 rounded-lg bg-primary text-on-primary font-label-ui text-label-ui font-semibold text-center hover:bg-primary-fixed transition-colors flex items-center justify-center gap-1"
+                    href="mailto:ardianto.connect@gmail.com">
+                    <span class="material-symbols-outlined text-sm">send</span>
+                    <span class="">Send Email</span>
+                  </a>
+                  <a class="py-2.5 rounded-lg bg-surface-container-high text-on-surface font-label-ui text-label-ui font-medium text-center hover:bg-surface-bright transition-colors flex items-center justify-center gap-1"
+                    href="https://www.linkedin.com/in/ardianto-ardianto-4326a185/" rel="noopener noreferrer"
+                    target="_blank">
+                    <span class="material-symbols-outlined text-sm">share</span>
+                    <span class="">LinkedIn</span>
+                  </a>
+                </div>
+                <div class="text-center">
+                  <span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant/80">Average response time:
+                    &lt; 24 hours</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Interactive Logic -->
+      <script>
+        function copyEmailToClipboard() {
+          const email = document.getElementById("emailValue").innerText.trim();
+          navigator.clipboard.writeText(email).then(() => {
+            const copyIcon = document.getElementById("copyIcon");
+            const copyText = document.getElementById("copyText");
+            const copyBtn = document.getElementById("copyEmailBtn");
+
+            copyIcon.innerText = "check";
+            copyText.innerText = "Copied!";
+            copyBtn.classList.add("text-tertiary");
+
+            setTimeout(() => {
+              copyIcon.innerText = "content_copy";
+              copyText.innerText = "Copy";
+              copyBtn.classList.remove("text-tertiary");
+            }, 2500);
+          });
+        }
+
+        function copyProfileConfig() {
+          const profileCode = `const engineer: DeveloperProfile = {
+  name: "Ardianto",
+  role: "Senior Software Engineer",
+  location: "Yogyakarta, Indonesia / Remote",
+  stack: ["Java", "Kotlin", "Go", "TypeScript/JS", "PHP", "Dart/Flutter", "React", "Kubernetes", "PostgreSQL", "MongoDB", "Ai"],
+  currentlyBuilding: "High-throughput telemetry ingestion engine",
+  status: "Open to select roles & open-source collaboration"
+};`;
+          navigator.clipboard.writeText(profileCode).then(() => {
+            const btn = document.getElementById("copyProfileBtn");
+            const originalContent = btn.innerHTML;
+            btn.innerHTML = `<span class="material-symbols-outlined text-sm text-tertiary">check</span>`;
+            setTimeout(() => {
+              btn.innerHTML = originalContent;
+            }, 2000);
+          });
+        }
+
+        function handleDownloadCV() {
+          alert("Redirecting to Ardianto's verified technical resume (PDF).");
+        }
+      </script>
+    </div>
+  </main>
+  <footer class="w-full bg-surface-container-lowest py-space-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]">
+    <div
+      class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col md:flex-row items-center justify-between gap-space-lg">
+      <div class="flex flex-col items-center md:items-start gap-1">
+        <div class="flex items-center gap-space-xs"><span
+            class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold">ardianto.dev</span><span
+            class="text-on-surface-variant/40">•</span><span
+            class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Deployed via GitHub Pages</span></div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">© 2026 Ardianto. Engineered with precision &amp;
+          modern architectural principles.</p>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-space-md">
+        <div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low"><span
+            class="h-1.5 w-1.5 rounded-full bg-tertiary"></span><span
+            class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">v2.4.0 (main branch)</span></div>
+        <div class="flex items-center gap-space-xs"><a
+            class="px-2 py-1 rounded font-label-mono-sm text-label-mono-sm text-on-surface-variant hover:text-primary transition-colors"
+            href="https://github.com/ardi-anto" rel="noopener noreferrer" target="_blank">github.com/ardi-anto</a><a
+            class="px-2 py-1 rounded font-label-mono-sm text-label-mono-sm text-on-surface-variant hover:text-primary transition-colors"
+            href="https://www.linkedin.com/in/ardianto-ardianto-4326a185/" rel="noopener noreferrer"
+            target="_blank">linkedin/in/ardianto</a></div>
       </div>
     </div>
   </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
