@@ -65,7 +65,18 @@
         <div class="h-5 w-px bg-outline-variant/30 hidden sm:block"></div><img alt="Profile"
           class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/50 hover:scale-[5] hover:shadow-2xl hover:z-50 relative transition-transform duration-300 origin-top-right cursor-pointer"
           src="./profile.jpg">
+        <button id="mobile-menu-btn" aria-label="Toggle Mobile Menu" class="lg:hidden p-2 ml-1 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/70 transition-colors">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
       </div>
+    </div>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 top-16 bg-surface/95 backdrop-blur-xl z-40 border-t border-outline-variant/20 flex flex-col items-center pt-8 gap-6 shadow-2xl overflow-y-auto pb-8">
+      <a href="index.html" class="text-on-surface font-headline-sm hover:text-primary transition-colors">About</a>
+      <a href="skills.html" class="text-on-surface font-headline-sm hover:text-primary transition-colors">Skills &amp; Tech</a>
+      <a href="projects.html" class="text-on-surface font-headline-sm hover:text-primary transition-colors">Projects</a>
+      <a href="experience.html" class="text-on-surface font-headline-sm hover:text-primary transition-colors">Experience</a>
+      <a href="mailto:ardianto.connect@gmail.com" class="text-on-surface font-headline-sm hover:text-primary transition-colors">Contact</a>
     </div>
   </header>
   <main class="w-full pt-16 bg-surface min-h-screen">

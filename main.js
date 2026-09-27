@@ -2,6 +2,21 @@ document.addEventListener('DOMContentLoaded', () => {
   renderFeaturedProjects();
   renderAllProjects();
   renderSkillsMatrix();
+
+  // Mobile menu toggle logic
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('span');
+      if (mobileMenu.classList.contains('hidden')) {
+        icon.textContent = 'menu';
+      } else {
+        icon.textContent = 'close';
+      }
+    });
+  }
 });
 
 function renderFeaturedProjects() {
